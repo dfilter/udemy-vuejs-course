@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <!-- any single javascript exrpession can be passed as a permameter, 
+        excluding for loops and if statements. -->
+        <button v-on:click="counter++">Increment</button>
+        <button v-on:click="counter--">Decrement</button>
+        <button v-on:click="secondCounter++">Increment Second</button>
+        <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+        <!-- computed properties are called like regular properties, without 
+        any parentheses. Using a computed property is also more scaleable 
+        the result function will run every time any of the above buttons are 
+        clicked while vue js will know when the output computed property 
+        needs to be updated, and then render it. -->
+        <p>Result: {{ result() }} | {{ output }}</p>
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>

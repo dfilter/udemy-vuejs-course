@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <!-- Use v-on listener using the click event this will execute when
+        the button is clicked. The argument passed here will be the function
+        executed. It is possible to pass arguments from the template 
+        to the vue instance by placing it into the parentheses. To pass
+        the event to the vue instance you can use the the $event reserved
+        variable. -->
+        <button v-on:click="increase(2, $event)">Click Me!</button>
+        <!-- regular javascript expressions excluding if or forloops will
+        work instead of a method call. -->
+        <button v-on:click="count++">Click Me!</button>
+        <!-- short ternary expressions can also be used. -->
+        <p>{{ count * 2 > 10 ? 'Greater then 10' : 'Smaller then 10' }}</p>
+        <!-- here the event object is passed to the updateCoordinates function
+        automatically. The event object is then used by to determine the 
+        coords. This function only fires when hovering ove the p tag. 
+        The stop modifier is used to stopPropagation of the event object
+        in this case a mousemove. This will stop the x y cooridnates from
+        updating. ".prevent" is also a useful function in order to prevent 
+        the default behaviour. These modifires can be chained. -->
+        <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}
+            - <span v-on:mousemove.stop.prevent="">DEAD SPOT</span>
+        </p>
+        <!-- in this case the modifire of keyup is the key which will 
+        fire the event. -->
+        <input type="text" v-on:keyup.enter="alertMe">
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>

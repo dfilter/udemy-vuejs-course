@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div id="app">
+        <!-- binding class atribute with vue js will work along with html 
+        class attribute. Passing a class requires an object. if the binded 
+        class has a special character such as a '-' you will need to put 
+        the class name in quotes. -->
+        <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+        <div class="demo" :class="{red: attachRed}"></div>
+        <!-- you can also mix the properties bound with an array.  -->
+        <div class="demo" :class="[color, {red: attachRed}]"></div>
+        <hr>
+        <input type="text" v-model="color">
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>

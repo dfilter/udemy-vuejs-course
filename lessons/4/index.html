@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <!-- the vue js v-once directive denotes that this element and any 
+        elements interpolated within will not be updated when the variable
+        in the view instance is updated. -->
+        <h1 v-once>{{ title }}</h1>
+        <p>{{ sayHello() }}</p>
+        <p><a v-bind:href="link">Google</a></p>
+        <!-- The v-html directive tells vuejs to render the variable passsed
+        as html rather then simply text. -->
+        <p v-html="finishedLink"></p>
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>

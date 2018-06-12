@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <p>{{ sayHello() }}</p>
+        <!-- Here the v-bind directive is used to bind the link variable 
+        defined in the data property of the vue instance. -->
+        <p><a v-bind:href="link">Google</a></p>
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>

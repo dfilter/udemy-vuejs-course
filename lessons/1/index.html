@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!-- container div which the vue instance points to -->
+    <div id="app">
+        <!-- v-on:input directive fires each time something is input to this
+        element it thenexecutes the "changeTitle" method defined in the vue
+        instance -->
+        <input type="text" v-on:input="changeTitle">
+        <!-- below is one of the variables defined in the vue instance.
+        This title will change dynamically as characters are typed in the
+        input box above. -->
+        <p>{{ title }}</p>
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>

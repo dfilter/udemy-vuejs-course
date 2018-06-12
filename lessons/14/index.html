@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app1">
+        <h1>{{ title }}</h1>
+        <!-- Clicking the below button twice will do nothing as vue js's
+        vertual dom will not register any actual change. -->
+        <button @click="title = 'Changed'">Change Title</button>
+        <!-- Clicking the below button will make the above button sease 
+        working since the vue instance has been destroyed. -->
+        <button @click="destroy">Destory Vue Instance</button>
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>

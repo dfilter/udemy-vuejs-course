@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div id="app">
+        <!-- for the style you can use cebab format "background-color" in 
+        single quotes or camle case "backgroundColor" without single quotes -->
+        <div class="demo" :style="{backgroundColor: color}"></div>
+        <!-- here is an example of setting the style with a bound computed 
+        property. -->
+        <div class="demo" :style="myStyle"></div>
+        <!-- style binding can also be done in an array with computed and 
+        defined properties. -->
+        <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <input type="text" v-model="width">
+    </div>
+</body>
+<foot>
+    <script src="../js/vue.js"></script>
+    <script src="main.js"></script>
+</foot>
+</html>
