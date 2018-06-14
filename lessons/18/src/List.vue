@@ -14,7 +14,7 @@
     export default {
         mixins: [fruitMixin],
         created() {
-            console.log('Created List.vue mixin')
+            console.log('Created List.vue with mixin')
         }
     }
 </script>

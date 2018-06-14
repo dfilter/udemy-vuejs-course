@@ -8,6 +8,7 @@
                 will remain the same-->
                 <p>{{ text | toUppercase | to-lowercase}}</p>
                 <hr>
+                <button v-on:click="fruits.push('Berries')">Push Berries</button>
                 <!-- when trying to filter large datasets such as a list it is better to use a 
                 computed property. See filtereredFruits in vue instance. -->
                 <input type="text" v-model="filterText">
@@ -42,7 +43,7 @@
         }
       },
       created() {
-        console.log('Created hook')
+        console.log('Created App.vue')
       }
     }
 </script>

@@ -1,3 +1,7 @@
+/**
+ * Each componant that imports this mixin will have its own unique instance this mixin
+ * it will not be shared between the components
+ */
 export const fruitMixin = {
     data() {
         return {
